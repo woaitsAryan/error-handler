@@ -1,0 +1,23 @@
+{
+  "name": "error-handler",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "rimraf -g \"packages/**/lib\" \"packages/**/*.tsbuildinfo\"",
+    "compile": "tsc -b tsconfig.build.json",
+    "prettier": "prettier \"*.{js,json,yml,md}\" \"packages/**/*\"",
+    "format": "npm run prettier -- --write",
+    "format:check": "npm run prettier -- --check",
+    "lint": "npm run format:check",
+    "test": "npm run --ws test --if-present",
+    "prepare": "npm run compile"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.8",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  }
+}
