@@ -17,4 +17,4 @@ const errorHandler = (
   return res.status(status).json({ error: err.message, success: false, data: {} })
 }
 
-export default errorHandler
+export { errorHandler };
