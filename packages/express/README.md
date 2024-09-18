@@ -10,12 +10,12 @@ npm install @error-handler/express
 
 ### Usage
 
-#### Custom Error Class APIError
-
 ```javascript
 import express from 'express';
 
 import { APIError, catchAsync, errorHandler } from '@error-handler/express';
+// OR
+// const { APIError, catchAsync, errorHandler } = require("@error-handler/express")
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.get('/', catchAsync(async (req, res) => {
 //   "data": {}
 // }
 
-app.use(errorHandler);
+app.use(errorHandler({ logErrors: true, defaultMessage: 'Internal server error' }));
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');

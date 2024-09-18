@@ -1,6 +1,6 @@
 {
     "name": "@error-handler/express",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Error handling utilities for Express.js",
     "main": "lib/main.js",
     "types": "lib/main.d.ts",
@@ -25,7 +25,10 @@
         "express",
         "error-handling",
         "async",
-        "middleware"
+        "middleware",
+        "error-classes",
+        "error-handling"
+
     ],
     "author": "Your Name",
     "license": "MIT",
