@@ -4,6 +4,16 @@ interface CustomError extends Error {
   status?: number
 }
 
+/**
+ * Express error handling middleware. Put this at the end of your middleware stack AFTER your routes. Preferably just before app.listen().
+ * @example
+ * // Response format:
+ * {
+ *   error: "Your custom error message here",
+ *   success: false,
+ *   data: {}
+ * }
+ */
 const errorHandler = (
   err: CustomError,
   _req: Request,

@@ -10,15 +10,28 @@ npm install @error-handler/express
 
 ### Usage
 
-#### Custom Error Class
+#### Custom Error Class APIError
 
 ```javascript
-const { CustomError } = require('@error-handler/express');
+import express from 'express';
 
-try {
-    throw new CustomError('This is a custom error', 400);
-} catch (error) {
-    console.error(error.message); // This is a custom error
-    console.error(error.status); // 400
-}
+import { APIError, catchAsync, errorHandler } from '@error-handler/express';
+
+const app = express();
+
+app.get('/', catchAsync(async (req, res) => {
+  throw new APIError.BadRequest('This throws a 400 status code error with the message written here');
+}));
+// response
+// {
+//   "error": "This throws a 400 status code error with the message written here",
+//   "success": false,
+//   "data": {}
+// }
+
+app.use(errorHandler);
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
 ```

@@ -24,6 +24,38 @@ import {
   _ErrorHTTPVersionNotSupported,
 } from "./server-errors";
 
+/**
+ * APIError namespace
+ *
+ * This namespace provides a collection of standardized HTTP error classes for both client (4xx) and server (5xx) errors.
+ * Each error class corresponds to a specific HTTP status code and can be used to create consistent error responses in an API.
+ *
+ *  Client Errors (4xx):
+ * - BadRequest (400)
+ * - Unauthorized (401)
+ * - PaymentRequired (402)
+ * - Forbidden (403)
+ * - NotFound (404)
+ * - MethodNotAllowed (405)
+ * - RequestTimeout (408)
+ * - UnsupportedMediaType (415)
+ * - UnprocessableEntity (422)
+ * - TooManyRequests (429)
+ *
+ * Server Errors (5xx):
+ * - InternalServerError (500)
+ * - NotImplemented (501)
+ * - BadGateway (502)
+ * - ServiceUnavailable (503)
+ * - GatewayTimeout (504)
+ * - HTTPVersionNotSupported (505)
+ *
+ * @example
+ * Usage:
+ * throw new APIError.BadRequest('Invalid input');
+ * throw new APIError.NotFound('User not found');
+ * throw new APIError.InternalServerError('Unexpected error occurred');
+ */
 namespace APIError {
   // Client 4xx errors
   export const BadRequest = _ErrorBadRequest;
