@@ -1,9 +1,12 @@
 {
     "name": "@error-handler/express",
-    "version": "1.0.0",
+    "version": "0.0.1",
+    "description": "Error handling utilities for Express.js",
     "main": "lib/main.js",
+    "types": "lib/main.d.ts",
     "scripts": {
-        "compile": "tsc"
+        "compile": "tsc",
+        "prepublishOnly": "npm run compile"
     },
     "dependencies": {
         "@types/node": "^20.0.0"
@@ -12,7 +15,22 @@
         "@types/express": "^4.17.21",
         "typescript": "5.5.4"
     },
-    "exports": {
-        ".": "./lib/main.js"
+    "peerDependencies": {
+        "express": "^4.0.0"
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "keywords": [
+        "express",
+        "error-handling",
+        "async",
+        "middleware"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/woaitsAryan/error-handler.git"
     }
 }
