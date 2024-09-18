@@ -1,39 +1,37 @@
 {
-    "name": "@error-handler/express",
-    "version": "0.1.1",
-    "description": "Error handling utilities for Express.js",
-    "main": "lib/main.js",
-    "types": "lib/main.d.ts",
-    "scripts": {
-        "compile": "tsc",
-        "prepublishOnly": "npm run compile"
-    },
-    "dependencies": {
-        "@types/node": "^20.0.0"
-    },
-    "devDependencies": {
-        "@types/express": "^4.17.21",
-        "typescript": "5.5.4"
-    },
-    "peerDependencies": {
-        "express": "^4.0.0"
-    },
-    "files": [
-        "lib/**/*"
-    ],
-    "keywords": [
-        "express",
-        "error-handling",
-        "async",
-        "middleware",
-        "error-classes",
-        "error-handling"
-
-    ],
-    "author": "Your Name",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/woaitsAryan/error-handler.git"
-    }
+  "name": "@error-handler/express",
+  "version": "0.1.1",
+  "description": "Error handling utilities for Express.js",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "scripts": {
+    "compile": "tsc",
+    "prepublishOnly": "npm run compile"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/express": "^4.17.21",
+    "typescript": "5.5.4"
+  },
+  "peerDependencies": {
+    "express": "^4.0.0"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "express",
+    "error-handling",
+    "async",
+    "middleware",
+    "error-classes",
+    "error-handling"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woaitsAryan/error-handler.git"
+  }
 }
