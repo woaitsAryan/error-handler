@@ -5,8 +5,8 @@
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "scripts": {
-    "compile": "tsc",
-    "prepublishOnly": "npm run compile",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "deploy": "npm run test && npm publish --access public"
   },
