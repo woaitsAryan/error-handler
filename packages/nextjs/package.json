@@ -1,0 +1,32 @@
+{
+  "name": "@error-handler/nextjs",
+  "version": "0.0.1",
+  "description": "Error handling utilities for Next.js",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "scripts": {
+    "compile": "tsc",
+    "prepublishOnly": "npm run compile"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "5.5.4"
+  },
+  "peerDependencies": {
+    "next": "^14.0.0"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "nextjs",
+    "error-handling",
+    "nextjs-error-handling"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woaitsAryan/error-handler.git"
+  }
+}
