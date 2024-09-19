@@ -1,108 +1,67 @@
-export class _ErrorInternalServerError extends Error {
-  status: number;
+import { __BaseError } from "./base-error";
 
-  constructor(message: string) {
-    super(message);
-    this.name = "InternalServerError";
-    this.status = 500;
+export class _ErrorInternalServerError extends __BaseError {
+  constructor(message: string = "Internal Server Error") {
+    super(message, 500);
   }
 }
 
-export class _ErrorNotImplemented extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "NotImplementedError";
-    this.status = 501;
+export class _ErrorNotImplemented extends __BaseError {
+  constructor(message: string = "Not Implemented") {
+    super(message, 501);
   }
 }
 
-export class _ErrorBadGateway extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "BadGatewayError";
-    this.status = 502;
+export class _ErrorBadGateway extends __BaseError {
+  constructor(message: string = "Bad Gateway") {
+    super(message, 502);
   }
 }
 
-export class _ErrorServiceUnavailable extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "ServiceUnavailableError";
-    this.status = 503;
+export class _ErrorServiceUnavailable extends __BaseError {
+  constructor(message: string = "Service Unavailable") {
+    super(message, 503);
   }
 }
 
-export class _ErrorGatewayTimeout extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "GatewayTimeoutError";
-    this.status = 504;
+export class _ErrorGatewayTimeout extends __BaseError {
+  constructor(message: string = "Gateway Timeout") {
+    super(message, 504);
   }
 }
 
-export class _ErrorHTTPVersionNotSupported extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "HTTPVersionNotSupportedError";
-    this.status = 505;
+export class _ErrorHTTPVersionNotSupported extends __BaseError {
+  constructor(message: string = "HTTP Version Not Supported") {
+    super(message, 505);
   }
 }
 
-export class _ErrorVariantAlsoNegotiates extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "VariantAlsoNegotiatesError";
-    this.status = 506;
+export class _ErrorVariantAlsoNegotiates extends __BaseError {
+  constructor(message: string = "Variant Also Negotiates") {
+    super(message, 506);
   }
 }
 
-export class _ErrorInsufficientStorage extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "InsufficientStorageError";
-    this.status = 507;
-  }
-}
-export class _ErrorLoopDetected extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "LoopDetectedError";
-    this.status = 508;
+export class _ErrorInsufficientStorage extends __BaseError {
+  constructor(message: string = "Insufficient Storage") {
+    super(message, 507);
   }
 }
 
-export class _ErrorNotExtended extends Error {
-  status: number;
-
-  constructor(message: string) {
-    super(message);
-    this.name = "NotExtendedError";
-    this.status = 510;
+export class _ErrorLoopDetected extends __BaseError {
+  constructor(message: string = "Loop Detected") {
+    super(message, 508);
   }
 }
 
-export class _ErrorNetworkAuthenticationRequired extends Error {
-  status: number;
+export class _ErrorNotExtended extends __BaseError {
+  constructor(message: string = "Not Extended") {
+    super(message, 510);
+  }
+}
 
-  constructor(message: string) {
-    super(message);
-    this.name = "NetworkAuthenticationRequiredError";
-    this.status = 511;
+export class _ErrorNetworkAuthenticationRequired extends __BaseError {
+  constructor(message: string = "Network Authentication Required") {
+    super(message, 511);
   }
 }
