@@ -1,7 +1,7 @@
-import { type Request, type Response, type NextFunction } from 'express'
+import type { Request, Response, NextFunction } from "express";
 
 interface CustomError extends Error {
-  status?: number
+  status?: number;
 }
 
 interface ErrorHandlerConfig {
@@ -19,26 +19,21 @@ interface ErrorHandlerConfig {
  *   data: {}
  * }
  */
-const errorHandler = (config: ErrorHandlerConfig = { logErrors: true, defaultMessage: 'Internal server error' }) => {
-  return (
-    err: CustomError,
-    _req: Request,
-    res: Response,
-    _next: NextFunction
-  ): Response => {
-    const status = err.status ?? 500
-    let message = err.message
+const errorHandler = (config: ErrorHandlerConfig = { logErrors: true, defaultMessage: "Internal server error" }) => {
+  return (err: CustomError, _req: Request, res: Response, _next: NextFunction): Response => {
+    const status = err.status ?? 500;
+    let message = err.message;
 
     if (status === 500) {
-      message = config.defaultMessage ?? 'Internal server error'
+      message = config.defaultMessage ?? "Internal server error";
     }
 
     if (config.logErrors) {
-      console.error(err)
+      console.error(err);
     }
 
-    return res.status(status).json({ error: message, success: false, data: {} })
-  }
-}
+    return res.status(status).json({ error: message, success: false, data: {} });
+  };
+};
 
 export { errorHandler };

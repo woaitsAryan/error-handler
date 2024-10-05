@@ -4,11 +4,6 @@
     "rootDir": "src",
     "outDir": "lib"
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/__tests__/*",
-    "jest.config.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["src/__tests__/*", "jest.config.ts"]
 }
